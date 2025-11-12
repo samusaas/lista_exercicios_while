@@ -6,11 +6,14 @@
     */
 
     //ENTRADA
-
-
+    let nome = prompt(`Informe seu nome de usuário`);
+    let senha = prompt(`Informe sua senha`);
     //PROCESSAMENTO
-
-
+    while(nome == senha){
+        alert(`INVÁLIDO`);
+        nome = prompt(`Informe seu nome de usuário`);
+        senha = prompt(`Informe sua senha`);
+    }
     //SAÍDA
-
+    document.write(`Válido`);
 </script>

@@ -6,11 +6,11 @@
     */
 
     //ENTRADA
-
-
+    let nota = Number(prompt(`Informe uma nota de zero a dez`));
     //PROCESSAMENTO
-
-
+    while(nota < 0 || nota > 10){
+        nota = Number(prompt(`Inválido, informe uma nota de zero a dez`));
+    }
     //SAÍDA
-
+    document.write(`Válido`);
 </script>
