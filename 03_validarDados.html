@@ -11,11 +11,27 @@
     */
 
     //ENTRADA
-
-
+    let nome = prompt(`Informe seu nome`);
+    let idade = Number(prompt(`Informe a sua idade`));
+    let salario = Number(prompt(`Informe o seu salário`));
+    let sexo = prompt(`Qual seu sexo? (m - f)`);
+    let civil = prompt(`Qual seu estado cívil? (c - casado, s - solteiro, v - viúvo, d - divorciado)`);
     //PROCESSAMENTO
-
-
+    while(nome.length <= 3){
+        nome = prompt(`INVÁLIDO Informe seu nome`);
+    }
+    while(idade <= 0 || idade >= 150){
+        idade = prompt(`INVÁLIDO Informe sua idade`);
+    }
+    while(salario < 0){
+        salario = Number(prompt(`INVÁLIDO Informe o seu salário`));
+    }
+    while(sexo.toLowerCase() != `m` || sexo.toLowerCase() != `f`){
+        sexo = prompt(`INVÁLIDO Qual seu sexo? (m - f)`);
+    }
+    while(civil.toLowerCase() != `s` || civil.toLowerCase() != `c` || civil.toLowerCase() != `v` || civil.toLowerCase() != `d`){
+        civil = prompt(`INVÁLIDO Qual seu estado cívil? (c - casado, s - solteiro, v - viúvo, d - divorciado)`);
+    }
     //SAÍDA
-
+    document.write(`Válido`);
 </script>
