@@ -20,11 +20,40 @@
     */
 
     //ENTRADA
+    let seuVoto;
+    let joaozinho = 0;
+    let mariazinha = 0;
+    let nulo = 0;
+    let branco = 0;
+    let vencedor;
+    do {
+        seuVoto = Number(prompt(`Informe seu voto: 1. Joãozinho, 2. Mariazinha, 3. Nulo, 4. Branco.`));
+        if(seuVoto == 1){
+            joaozinho++
+        } else if(seuVoto == 2){
+            mariazinha++
+        } else if(seuVoto == 3){
+            nulo++
+        } else if(seuVoto == 4){
+            branco++
+        }
+    } while (seuVoto != 0);
 
+    let soma = joaozinho + mariazinha + nulo + branco;
+    let porNulo = (nulo / soma) * 100;
+    let porBranco = (branco / soma) * 100;
 
-    //PROCESSAMENTO
-
-
+    if(joaozinho > mariazinha){
+        vencedor = `Joãozinho`
+    } else if(joaozinho < mariazinha){
+        vencedor = `Mariazinha`;
+    } else{
+        alert(`Joãozinho e Mariazinha empataram`);
+        vencedor = `Empate`;
+    }
     //SAÍDA
-
+    document.write(`O número de votos são: Joãozinho ${joaozinho}, Mariazinha ${mariazinha} <br>`);
+    document.write(`Em nulo foram: ${porNulo.toFixed(2)}% <br>`);
+    document.write(`Em branco foram: ${porBranco.toFixed(2)}% <br>`);
+    document.write(`O vencedor foi: ${vencedor}`);
 </script>
