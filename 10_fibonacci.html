@@ -1,15 +1,28 @@
+<meta charset="UTF-8">
 <script>
+    //Não sei pq estava sem o meta charset
+
     //Problema: Fibonacci
     /*
     Pergunte ao usuário quantos números da sequência de Fibonacci deseja obter, usando a estrutura de repetição while.
     */
 
     //ENTRADA
-
-
+    let quantos = Number(prompt(`Quantos números da sequência de Fibonacci deseja obter?`));
     //PROCESSAMENTO
+    let anterior = 0;
+    let atual = 1;
+    let contador = 0;
+    let resultado = "";
 
+    while (contador < quantos) {
+        resultado = resultado + anterior + "";
+        let proximo = anterior + atual;
+        anterior = atual;
+        atual = proximo;
+        contador++;
+    }
 
     //SAÍDA
-    
+    document.write(`Sequencia de Fibonacci: ${resultado} `)
 </script>

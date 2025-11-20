@@ -1,3 +1,4 @@
+<meta charset="UTF-8">
 <script>
     //Problema: Inversão de Número
     /*
@@ -6,12 +7,18 @@
     Entrada: 12345
     Saída: 54321
     */
-
     //ENTRADA
-
-
+    let num = prompt(`Escolha um número para inverter`);
     //PROCESSAMENTO
+    let invertido = "";
+    let contador = num.length - 1;
 
+    while (contador >= 0) {
+        invertido = invertido + num[contador]; 
+        contador--;
+    }
+
+    document.write(`Número invertido: ${invertido}`);
 
     //SAÍDA
 
